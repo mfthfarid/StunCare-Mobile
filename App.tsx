@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 import LoginScreen from './src/screens/Auth/LoginScreen';
+import RegisterScreen from './src/screens/Auth/RegisterScreen';
+import ForgotPasswordScreen from './src/screens/Auth/ForgotPasswordScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import ArtikelScreen from './src/screens/ArtikelScreen';
 import DetailArtikelScreen from './src/screens/DetailArtikelScreen';
@@ -100,6 +102,16 @@ export default function App() {
               <LoginScreen {...props} onLogin={() => setIsLoggedIn(true)} />
             )}
           </Stack.Screen>
+          <Stack.Screen
+            name="Register"
+            component={RegisterScreen}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="ForgotPassword"
+            component={ForgotPasswordScreen}
+            options={{ headerShown: false }}
+          />
         </Stack.Navigator>
       )}
     </NavigationContainer>
